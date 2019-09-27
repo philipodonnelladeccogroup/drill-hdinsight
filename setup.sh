@@ -7,7 +7,7 @@ if [[ "$ISSUPPORTED" != "True" ]]; then
   exit 1
 fi
 
-VERSION=1.10.0
+VERSION=1.16.0
 DRILL_BASE_DIR=/var/lib/drill
 
 if [[ -n $1 ]]; then
