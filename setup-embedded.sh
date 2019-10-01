@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eux
 
+sudo apt install openjdk-8-jre-headless
+
 VERSION=1.16.0
 DRILL_BASE_DIR=/var/lib/drill
 
