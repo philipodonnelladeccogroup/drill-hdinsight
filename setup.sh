@@ -45,9 +45,9 @@ wget https://raw.githubusercontent.com/yaron2/hdinsight-drill/master/logback.xml
 
 cd $DRILL_BASE_DIR
 
-ZKHOSTS=`grep -R zookeeper /etc/hadoop/conf/yarn-site.xml | grep 2181 | grep -oPm1 "(?<=<value>)[^<]+"`
+#ZKHOSTS=`grep -R zookeeper /etc/hadoop/conf/yarn-site.xml | grep 2181 | grep -oPm1 "(?<=<value>)[^<]+"`
 #if [ -z "$ZKHOSTS" ]; then
-#    ZKHOSTS=`grep -R zk /etc/hadoop/conf/yarn-site.xml | grep 2181 | grep -oPm1 "(?<=<value>)[^<]+"`
+ZKHOSTS=`grep -R zk /etc/hadoop/conf/yarn-site.xml | grep 2181 | grep -oPm1 "(?<=<value>)[^<]+"`
 #fi
 
 sed -i "s@localhost:2181@$ZKHOSTS@" $DRILLDIR/conf/drill-override.conf
